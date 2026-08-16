@@ -1,13 +1,6 @@
 (function () {
   // BRAND RULE: usar exclusivamente los archivos maestros oficiales de Prospectum Academy.
   // No redibujar, no sustituir por texto, no recolorear.
-  const logoColor = 'https://lh3.googleusercontent.com/d/1juMaVsFDKG-3K57DN4DkeiS3ccTXpISk=w1200';
-  const logoWhite = 'https://lh3.googleusercontent.com/d/11tCy8A2R8cQESVlTNwNSUvfQxvMrmWSc=w1200';
-
-  document.querySelectorAll('img.brand-logo').forEach((img) => {
-    const original = img.getAttribute('src') || '';
-    img.src = original.includes('white') ? logoWhite : logoColor;
-  });
 
   // Ajuste visual solicitado: títulos Instrument Sans Medium, sin efecto Bold.
   const currentScript = document.currentScript;
