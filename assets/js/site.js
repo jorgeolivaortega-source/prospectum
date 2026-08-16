@@ -1,8 +1,8 @@
 (function () {
-  // Demo visual: carga el logo maestro de Prospectum Academy aprobado en Drive.
-  // En WordPress/Hostinger debe utilizarse el asset maestro local, no este enlace de preview.
-  const logoColor = 'https://drive.google.com/thumbnail?id=1juMaVsFDKG-3K57DN4DkeiS3ccTXpISk&sz=w1000';
-  const logoWhite = 'https://drive.google.com/thumbnail?id=11tCy8A2R8cQESVlTNwNSUvfQxvMrmWSc&sz=w1000';
+  // BRAND RULE: usar exclusivamente los archivos maestros oficiales de Prospectum Academy.
+  // No redibujar, no sustituir por texto, no recolorear.
+  const logoColor = 'https://lh3.googleusercontent.com/d/1juMaVsFDKG-3K57DN4DkeiS3ccTXpISk=w1200';
+  const logoWhite = 'https://lh3.googleusercontent.com/d/11tCy8A2R8cQESVlTNwNSUvfQxvMrmWSc=w1200';
 
   document.querySelectorAll('img.brand-logo').forEach((img) => {
     const original = img.getAttribute('src') || '';
