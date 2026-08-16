@@ -2,6 +2,18 @@
   // BRAND RULE: usar exclusivamente los archivos maestros oficiales de Prospectum Academy.
   // No redibujar, no sustituir por texto, no recolorear.
 
+  // En previews públicos, fuerza los logos oficiales desde una URL absoluta estable.
+  // Evita fallos de resolución de rutas relativas en RawGitHack y otros visores.
+  const logoBase = 'https://raw.githubusercontent.com/jorgeolivaortega-source/prospectum/main/assets/img/';
+  document.querySelectorAll('img.brand-logo').forEach((img) => {
+    const src = img.getAttribute('src') || '';
+    if (src.includes('logo-prospectum-academy-white.png')) {
+      img.src = logoBase + 'logo-prospectum-academy-white.png';
+    } else if (src.includes('logo-prospectum-academy.png')) {
+      img.src = logoBase + 'logo-prospectum-academy.png';
+    }
+  });
+
   // Ajuste visual solicitado: títulos Instrument Sans Medium, sin efecto Bold.
   const currentScript = document.currentScript;
   if (currentScript) {
