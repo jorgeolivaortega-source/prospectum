@@ -1,15 +1,28 @@
 (function () {
-  const logoColor = `<svg xmlns="http://www.w3.org/2000/svg" width="520" height="120" viewBox="0 0 520 120"><rect width="520" height="120" fill="none"/><text x="0" y="66" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="700" fill="#584771" letter-spacing="-1">PROSPECTUM</text><text x="2" y="104" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#0EB0CC" letter-spacing="7">ACADEMY</text></svg>`;
-  const logoWhite = `<svg xmlns="http://www.w3.org/2000/svg" width="520" height="120" viewBox="0 0 520 120"><rect width="520" height="120" fill="none"/><text x="0" y="66" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="700" fill="#FFFFFF" letter-spacing="-1">PROSPECTUM</text><text x="2" y="104" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#0EB0CC" letter-spacing="7">ACADEMY</text></svg>`;
+  // Demo visual: carga el logo maestro de Prospectum Academy aprobado en Drive.
+  // En WordPress/Hostinger debe utilizarse el asset maestro local, no este enlace de preview.
+  const logoColor = 'https://drive.google.com/thumbnail?id=1juMaVsFDKG-3K57DN4DkeiS3ccTXpISk&sz=w1000';
+  const logoWhite = 'https://drive.google.com/thumbnail?id=11tCy8A2R8cQESVlTNwNSUvfQxvMrmWSc&sz=w1000';
 
   document.querySelectorAll('img.brand-logo').forEach((img) => {
     const original = img.getAttribute('src') || '';
-    const svg = original.includes('white') ? logoWhite : logoColor;
-    img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    img.src = original.includes('white') ? logoWhite : logoColor;
   });
 
-  // Preview hosting does not resolve directory indexes automatically.
-  // Preserve the approved route architecture while making every link navigable.
+  // Ajuste visual solicitado: títulos Instrument Sans Medium, sin efecto Bold.
+  const currentScript = document.currentScript;
+  if (currentScript) {
+    const tuningHref = new URL('../css/visual-tuning-v1.2.css', currentScript.src).href;
+    if (!document.querySelector(`link[href="${tuningHref}"]`)) {
+      const tuning = document.createElement('link');
+      tuning.rel = 'stylesheet';
+      tuning.href = tuningHref;
+      document.head.appendChild(tuning);
+    }
+  }
+
+  // El hosting de preview no siempre resuelve índices de directorio automáticamente.
+  // Preserva la arquitectura aprobada y mantiene navegables las cuatro vistas.
   document.querySelectorAll('a[href]').forEach((link) => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#') || href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
