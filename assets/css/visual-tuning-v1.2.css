@@ -1,0 +1,32 @@
+/* Prospectum Academy — ajuste visual solicitado 2026-08-16 */
+/* Mantiene Instrument Sans como tipografía de títulos, reduciendo el peso para evitar efecto Bold. */
+h1,
+h2,
+h3,
+.hero-copy h1,
+.card h3,
+.step h3,
+.competency h3,
+.footer h3 {
+  font-weight: 500;
+}
+
+/* El logo oficial contiene aire transparente en el archivo maestro; este ancho compensa su caja visual. */
+.brand-logo {
+  width: clamp(215px, 19vw, 270px);
+  height: auto;
+}
+
+.footer .brand-logo {
+  width: 230px;
+}
+
+@media (max-width: 580px) {
+  .brand-logo {
+    width: 220px;
+  }
+
+  .footer .brand-logo {
+    width: 210px;
+  }
+}
