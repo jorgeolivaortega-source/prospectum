@@ -21,6 +21,77 @@ h3,
   width: 230px;
 }
 
+/* Microinteracciones: refuerzan acción sin alterar arquitectura ni copy. */
+.btn,
+.site-nav .nav-cta,
+.card,
+.step,
+.competency {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+/* CTA principal Postular: violeta institucional + acento Academy cyan. */
+.btn[data-track="postular"],
+.site-nav .nav-cta {
+  position: relative;
+  background: var(--color-violet);
+  color: var(--color-white);
+  border-color: var(--color-violet);
+  box-shadow:
+    inset 0 -3px 0 var(--color-academy),
+    0 8px 20px rgba(88, 71, 113, .16);
+}
+
+.btn[data-track="postular"]:hover,
+.site-nav .nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 -4px 0 var(--color-academy),
+    0 12px 28px rgba(88, 71, 113, .23),
+    0 0 0 4px rgba(14, 176, 204, .12);
+}
+
+.btn[data-track="postular"]:active,
+.site-nav .nav-cta:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 0 -2px 0 var(--color-academy),
+    0 5px 14px rgba(88, 71, 113, .16);
+}
+
+/* CTA secundarios: respuesta visual más clara al hover. */
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(14, 176, 204, .07);
+  border-color: var(--color-academy);
+  box-shadow: 0 8px 18px rgba(88, 71, 113, .09);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(88, 71, 113, .20);
+}
+
+/* Tarjetas y pasos: interacción discreta, sin convertir la página en dashboard. */
+.card:hover,
+.step:hover,
+.competency:hover {
+  transform: translateY(-4px);
+  border-color: rgba(14, 176, 204, .48);
+  box-shadow: 0 14px 34px rgba(88, 71, 113, .10);
+}
+
+/* Foco accesible, coherente con el acento Academy. */
+.btn:focus-visible,
+.site-nav .nav-cta:focus-visible {
+  outline: 3px solid var(--color-academy);
+  outline-offset: 4px;
+}
+
 @media (max-width: 580px) {
   .brand-logo {
     width: 220px;
@@ -28,5 +99,16 @@ h3,
 
   .footer .brand-logo {
     width: 210px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .site-nav .nav-cta,
+  .card,
+  .step,
+  .competency {
+    transition: none;
+    transform: none !important;
   }
 }
