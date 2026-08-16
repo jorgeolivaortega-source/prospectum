@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Postular a Ruta SDR | Prospectum Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Postula a la próxima cohorte de Ruta SDR y cuéntanos tu punto de partida y qué buscas desarrollar.">
+  <link rel="canonical" href="https://prospectum.academy/postular/">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="../" aria-label="Prospectum Academy — Home"><img class="brand-logo" src="../assets/img/logo-prospectum-academy.png" alt="Prospectum Academy"></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">Menú</button><nav class="site-nav" id="main-nav" data-site-nav aria-label="Navegación principal"><a href="../">Home</a><a href="../ruta-sdr/" data-track="ruta_sdr">Ruta SDR</a><a href="../para-empresas/" data-track="para_empresas">Para empresas</a><a href="./" class="nav-cta" aria-current="page" data-track="postular">Postular</a></nav></div></header>
+<main id="contenido" class="section section-cream">
+  <div class="container">
+    <form class="form-shell" data-application-form novalidate>
+      <div data-form-content class="form-content">
+        <span class="eyebrow">PRÓXIMA COHORTE · RUTA SDR</span>
+        <h1 style="font-size:var(--step-3); line-height:1.08; letter-spacing:-.03em; margin:.75rem 0 1rem">Postula a la próxima cohorte de Ruta SDR</h1>
+        <p class="section-intro">Cuéntanos brevemente tu punto de partida y qué buscas desarrollar.</p>
+        <p>Ruta SDR recibe tanto a personas que actualmente realizan funciones de prospección como a quienes buscan prepararse para ingresar al oficio.</p>
+
+        <div class="form-grid" style="margin-top:2rem">
+          <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="firstname" autocomplete="given-name" required></div>
+          <div class="field"><label for="apellido">Apellido</label><input id="apellido" name="lastname" autocomplete="family-name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="telefono">Teléfono / WhatsApp</label><input id="telefono" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field"><label for="pais">País</label><input id="pais" name="country" autocomplete="country-name" required></div>
+          <div class="field"><label for="cargo">Cargo o actividad actual</label><input id="cargo" name="jobtitle" autocomplete="organization-title" required></div>
+          <div class="field field-full"><label for="empresa">Empresa o institución <span class="text-muted">— opcional</span></label><input id="empresa" name="company" autocomplete="organization"></div>
+        </div>
+
+        <fieldset>
+          <legend>¿Cuál describe mejor tu situación actual?</legend>
+          <label class="radio-card"><input type="radio" name="perfil_ruta_sdr" value="Practicante actual — Upskilling" required><span>Actualmente realizo funciones de prospección B2B y quiero fortalecer mis competencias.</span></label>
+          <label class="radio-card"><input type="radio" name="perfil_ruta_sdr" value="Transición profesional — Reskilling" required><span>Estoy en transición profesional y quiero prepararme para ingresar al oficio.</span></label>
+          <label class="radio-card"><input type="radio" name="perfil_ruta_sdr" value="Estudiante/primer empleo — Reskilling" required><span>Soy estudiante o estoy comenzando mi trayectoria profesional y quiero formarme en prospección B2B.</span></label>
+        </fieldset>
+
+        <div class="field" style="margin-top:1.3rem"><label for="objetivo">¿Qué te gustaría lograr con Ruta SDR?</label><textarea id="objetivo" name="ruta_sdr_objetivo" maxlength="800" required></textarea></div>
+        <label class="consent"><input type="checkbox" name="consentimiento" value="aceptado" required><span>Acepto que Prospectum Academy utilice mis datos para gestionar esta postulación y contactarme respecto de Ruta SDR y sus próximas cohortes.</span></label>
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+        <p class="form-note">En producción, este formulario debe conectarse a HubSpot conservando los mismos campos, valores de segmentación y UTMs.</p>
+        <button class="btn btn-primary" type="submit" data-track="form_submit">Enviar postulación</button>
+        <div class="form-error" data-form-error role="alert" aria-live="polite"></div>
+      </div>
+
+      <div class="success-panel" data-form-success role="status" aria-live="polite">
+        <span class="eyebrow">POSTULACIÓN RECIBIDA</span>
+        <h2>Recibimos tu postulación.</h2>
+        <p class="section-intro">Gracias por tu interés en Ruta SDR.</p>
+        <p>Revisaremos la información enviada y te comunicaremos los próximos pasos relacionados con la próxima cohorte.</p>
+        <a class="btn btn-secondary" href="../ruta-sdr/">Volver a Ruta SDR</a>
+      </div>
+    </form>
+  </div>
+</main>
+<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="../" aria-label="Prospectum Academy — Home"><img class="brand-logo" src="../assets/img/logo-prospectum-academy-white.png" alt="Prospectum Academy"></a></div><div><h3>Formación</h3><ul><li><a href="../ruta-sdr/">Ruta SDR</a></li><li><a href="../ruta-sdr/#cohorte">Cohorte</a></li><li><a href="../ruta-sdr/#certificacion">Certificación</a></li><li><a href="./">Postular</a></li></ul></div><div><h3>Ecosistema</h3><ul><li><a href="https://prospectum.tech" target="_blank" rel="noopener">Para empresas B2B ↗</a></li><li><a href="https://jorgeoliva.ai" target="_blank" rel="noopener">Jorge Oliva ↗</a></li><li><a href="https://www.linkedin.com/company/prospectum%C2%AE/" target="_blank" rel="noopener">LinkedIn ↗</a></li></ul></div><div><h3>Institucional y legal</h3><ul><li><a href="mailto:contacto@prospectum.academy">Contacto</a></li></ul></div></div><div class="container footer-bottom">© 2026 Prospectum Academy</div></footer>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
