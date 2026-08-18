@@ -1,0 +1,178 @@
+.testimonials-section {
+  background: linear-gradient(180deg, rgba(14,176,204,.055) 0%, rgba(88,71,113,.045) 100%);
+  overflow: hidden;
+}
+
+.testimonials-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  align-items: end;
+  margin-bottom: 2rem;
+}
+
+.testimonials-head h2 { margin-bottom: .8rem; }
+.testimonials-head .section-intro { margin-bottom: 0; }
+
+.testimonials-note {
+  color: var(--color-ink-soft);
+  font-size: var(--step--1);
+  max-width: 34rem;
+  justify-self: end;
+}
+
+.testimonials-carousel {
+  position: relative;
+}
+
+.testimonials-viewport {
+  overflow: hidden;
+  margin-inline: -1px;
+  padding: 1px;
+}
+
+.testimonials-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform .42s ease;
+  will-change: transform;
+}
+
+.testimonial-card {
+  flex: 0 0 calc((100% - 2rem) / 3);
+  min-width: 0;
+  min-height: 360px;
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.35rem, 2vw, 1.8rem);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 14px 34px rgba(88,71,113,.07);
+}
+
+.testimonial-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.testimonial-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: .35rem .68rem;
+  border-radius: var(--radius-pill);
+  background: rgba(14,176,204,.10);
+  color: var(--color-violet);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.testimonial-index {
+  color: var(--color-neutral);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.testimonial-card h3 {
+  font-size: clamp(1.45rem, 2vw, 1.9rem);
+  margin: 0 0 .4rem;
+}
+
+.testimonial-context {
+  color: var(--color-ink-soft);
+  margin: 0;
+  max-width: 28rem;
+}
+
+.testimonial-spacer { flex: 1; min-height: 3.5rem; }
+
+.testimonial-meta {
+  border-top: 1px solid var(--color-line);
+  padding-top: 1rem;
+  margin-top: 1.25rem;
+  font-size: .9rem;
+  color: var(--color-ink-soft);
+}
+
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.testimonials-buttons { display: flex; gap: .6rem; }
+
+.carousel-btn {
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-violet);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.carousel-btn:hover { border-color: var(--color-academy); }
+.carousel-btn:disabled { opacity: .35; cursor: default; }
+
+.carousel-status {
+  font-size: .82rem;
+  font-weight: 800;
+  color: var(--color-ink-soft);
+  letter-spacing: .06em;
+}
+
+.testimonials-cta {
+  margin-top: 2.6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.testimonials-cta p { margin: 0; max-width: 720px; }
+
+@media (max-width: 900px) {
+  .testimonials-head { grid-template-columns: 1fr; align-items: start; }
+  .testimonials-note { justify-self: start; }
+  .testimonial-card { flex-basis: calc((100% - 1rem) / 2); }
+}
+
+@media (max-width: 580px) {
+  .testimonials-viewport {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: .35rem;
+  }
+  .testimonials-viewport::-webkit-scrollbar { display: none; }
+  .testimonials-track { transform: none !important; gap: .8rem; }
+  .testimonial-card {
+    flex-basis: 86%;
+    min-height: 330px;
+    scroll-snap-align: start;
+  }
+  .testimonials-buttons { display: none; }
+  .testimonials-controls { justify-content: flex-end; }
+  .testimonials-cta { align-items: flex-start; flex-direction: column; }
+  .testimonials-cta .btn { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track { transition: none; }
+}
