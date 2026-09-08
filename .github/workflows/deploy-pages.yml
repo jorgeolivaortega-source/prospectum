@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: QA Ruta SDR canonical migration
+        run: python3 scripts/qa_ruta_sdr.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

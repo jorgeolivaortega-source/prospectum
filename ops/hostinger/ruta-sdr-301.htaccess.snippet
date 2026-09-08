@@ -1,0 +1,6 @@
+# Prospectum Academy — Ruta SDR canonical migration
+# Insert ABOVE the WordPress BEGIN/END block in the production .htaccess.
+# Purpose: preserve link equity and route every legacy request to the canonical URL.
+
+RewriteEngine On
+RewriteRule ^ruta-de-formacion-y-certificacion-sdr-b2b/?$ /ruta-sdr/ [R=301,L,NE]
