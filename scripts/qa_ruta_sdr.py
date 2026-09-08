@@ -52,10 +52,11 @@ for ok, message in checks:
     if not ok:
         errors.append(message)
 
-# The legacy slug is permitted only in the compatibility page and deployment rule.
+# The legacy slug is permitted only where it is required to implement or test migration.
 allowed = {
     ROOT / LEGACY_SLUG / "index.html",
     ROOT / "ops" / "hostinger" / "ruta-sdr-301.htaccess.snippet",
+    ROOT / ".github" / "workflows" / "qa-ruta-sdr.yml",
     Path(__file__).resolve(),
 }
 for path in ROOT.rglob("*"):
