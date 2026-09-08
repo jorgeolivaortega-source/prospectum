@@ -1,0 +1,25 @@
+name: QA Ruta SDR migration
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'ruta-sdr/**'
+      - 'postular/**'
+      - 'ruta-de-formacion-y-certificacion-sdr-b2b/**'
+      - 'ops/hostinger/**'
+      - 'scripts/qa_ruta_sdr.py'
+      - '.github/workflows/qa-ruta-sdr.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Validate canonical URL, internal path and redirect rule
+        run: python3 scripts/qa_ruta_sdr.py
